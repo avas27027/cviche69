@@ -1,5 +1,7 @@
 # AngularTemplate
 
+This is a development proyect to show the abilites of creating a web page.
+It is **NOT** the oficial web page of this restaurant
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
 
 ## Development server
