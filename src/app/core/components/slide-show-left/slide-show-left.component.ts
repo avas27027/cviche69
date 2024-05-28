@@ -1,36 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ContentChildren, ElementRef, Input, OnInit, QueryList, Renderer2, TemplateRef, ViewChild, ViewChildren, ViewContainerRef } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+import { Component, ContentChildren, ElementRef, Input, QueryList, Renderer2, TemplateRef, ViewChild, ViewChildren } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 
-/** 
- * **aniVelocity** - *number*
- * 
- * **styleWidth** - *string*
- * 
- * **height** - *string*
- * 
- * legend - *boolean*;
- * 
- * buttons - *boolean*;
- * 
- * spaceB - *number*;
- * 
- * interval - *number*
- * 
- * behavour - *"linear" | "ease"*
- * 
- * mediumMediaHeight - *string*
- * 
- * smallMediaHeight - *string*
-*/
 @Component({
-  selector: 'app-slide-show',
+  selector: 'app-slide-show-left',
   standalone: true,
-  imports: [MatIconModule, CommonModule],
-  templateUrl: './slide-show.component.html',
-  styleUrl: './slide-show.component.scss'
+  imports: [CommonModule, MatIcon],
+  templateUrl: './slide-show-left.component.html',
+  styleUrl: './slide-show-left.component.scss'
 })
-export class SlideShowComponent implements AfterViewInit {
+export class SlideShowLeftComponent {
   constructor(private renderer: Renderer2) { }
 
   private _curr = 0;

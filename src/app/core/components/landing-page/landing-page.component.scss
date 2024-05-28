@@ -1,20 +1,116 @@
-.landingPage{
-    .landing-header{
+@use "../../../styles" as *;
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+.margin {
+    margin: 30vh 0;
+}
+
+.landingPage {
+    display: block;
+
+    .video {
+        position: relative;
+        overflow: hidden;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        img{
-            width: 50%;
-            border-radius: 5%;
-            box-shadow: 5px 0 15px;
+
+        video {
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            filter: brightness(.4);
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .box {
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            padding: 10vw;
+
+            h1 {
+                font-size: 2em;
+                line-height: 2.5em;
+            }
+
+            p {
+                color: white;
+
+                @media screen and (max-width: $large) {
+                    display: none;
+                }
+            }
+
+            .element-top {
+                display: flex;
+                gap: 40px;
+                align-items: center;
+
+            }
+
+            .element {
+                &-buttons {
+                    display: flex;
+                    gap: 50px;
+
+                    @media screen and (max-width: $small) {
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    .pedidosYa {
+                        background-color: black;
+                        border: solid 1px white;
+                        color: white;
+                        border-radius: 30px;
+                        padding: 15px 20px;
+                    }
+
+                    .promociones {
+                        border-radius: 30px;
+                        padding: 15px 20px;
+                    }
+                }
+            }
         }
     }
 }
 
-#svgTitle{
+.promos {
+    &-cards {
+        @media screen and (max-width: $small) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.locales {
+    h2 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .box {
+        width: 100vw;
+        height: 80vh;
+        padding: 0 20px;
+    }
+}
+
+
+
+#svgTitle {
     stroke-dasharray: 1314;
     stroke-dashoffset: 1314;
     animation: titleAni 4s ease;
@@ -22,7 +118,7 @@
 }
 
 @keyframes titleAni {
-    to{
+    to {
         stroke-dashoffset: 0;
     }
 }

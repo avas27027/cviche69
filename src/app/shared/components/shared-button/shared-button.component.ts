@@ -13,9 +13,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './shared-button.component.scss'
 })
 export class SharedButtonComponent {
-  @Input({required:true}) 
+  @Input({ required: true })
   title!: string;
-  @Input() 
+  @Input()
   link: string = '';
+  @Input() bckColor = "black"
+  @Input() txtColor = "white"
 
 }
